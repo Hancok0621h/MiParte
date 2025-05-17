@@ -55,6 +55,7 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cboxEstado = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAsignacion)).BeginInit();
             this.SuspendLayout();
@@ -323,11 +324,21 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "Estado_ValoresFijos:";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(283, 22);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(142, 13);
+            this.label7.TabIndex = 21;
+            this.label7.Text = "TABLA DE ASIGNACIONES";
+            // 
             // tbl_Asignacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(758, 408);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.groupBox1);
             this.Name = "tbl_Asignacion";
             this.Text = "Form tbl_Asignacion";
@@ -335,6 +346,7 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAsignacion)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -367,6 +379,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.Label label7;
     }
 }
 

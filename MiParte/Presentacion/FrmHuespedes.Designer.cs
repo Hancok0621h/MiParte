@@ -33,20 +33,20 @@
             this.cboxEstado = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtNit = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtCodigoHuesped = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.iconButton5 = new FontAwesome.Sharp.IconButton();
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.dgvHuespedes = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtCodigoHuesped = new System.Windows.Forms.TextBox();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtNit = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtTelefono = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,6 +55,7 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label7 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHuespedes)).BeginInit();
             this.SuspendLayout();
@@ -107,6 +108,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.txtTelefono);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.txtNit);
@@ -131,6 +133,70 @@
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // txtTelefono
+            // 
+            this.txtTelefono.Location = new System.Drawing.Point(395, 29);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(121, 20);
+            this.txtTelefono.TabIndex = 30;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(276, 34);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(49, 13);
+            this.label6.TabIndex = 29;
+            this.label6.Text = "Telefono";
+            // 
+            // txtNit
+            // 
+            this.txtNit.Location = new System.Drawing.Point(140, 84);
+            this.txtNit.Name = "txtNit";
+            this.txtNit.Size = new System.Drawing.Size(121, 20);
+            this.txtNit.TabIndex = 28;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(41, 87);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(20, 13);
+            this.label5.TabIndex = 27;
+            this.label5.Text = "Nit";
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(140, 58);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(121, 20);
+            this.txtNombre.TabIndex = 26;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(41, 61);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(44, 13);
+            this.label3.TabIndex = 25;
+            this.label3.Text = "Nombre";
+            // 
+            // txtCodigoHuesped
+            // 
+            this.txtCodigoHuesped.Location = new System.Drawing.Point(140, 27);
+            this.txtCodigoHuesped.Name = "txtCodigoHuesped";
+            this.txtCodigoHuesped.Size = new System.Drawing.Size(121, 20);
+            this.txtCodigoHuesped.TabIndex = 24;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(41, 32);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(83, 13);
+            this.label2.TabIndex = 23;
+            this.label2.Text = "CodigoHuesped";
             // 
             // iconButton5
             // 
@@ -216,70 +282,6 @@
             this.dgvHuespedes.TabIndex = 17;
             this.dgvHuespedes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHuespedes_CellClick);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(41, 32);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 13);
-            this.label2.TabIndex = 23;
-            this.label2.Text = "CodigoHuesped";
-            // 
-            // txtCodigoHuesped
-            // 
-            this.txtCodigoHuesped.Location = new System.Drawing.Point(140, 27);
-            this.txtCodigoHuesped.Name = "txtCodigoHuesped";
-            this.txtCodigoHuesped.Size = new System.Drawing.Size(121, 20);
-            this.txtCodigoHuesped.TabIndex = 24;
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.Location = new System.Drawing.Point(140, 58);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(121, 20);
-            this.txtNombre.TabIndex = 26;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(41, 61);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 13);
-            this.label3.TabIndex = 25;
-            this.label3.Text = "Nombre";
-            // 
-            // txtNit
-            // 
-            this.txtNit.Location = new System.Drawing.Point(140, 84);
-            this.txtNit.Name = "txtNit";
-            this.txtNit.Size = new System.Drawing.Size(121, 20);
-            this.txtNit.TabIndex = 28;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(41, 87);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(20, 13);
-            this.label5.TabIndex = 27;
-            this.label5.Text = "Nit";
-            // 
-            // txtTelefono
-            // 
-            this.txtTelefono.Location = new System.Drawing.Point(395, 29);
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(121, 20);
-            this.txtTelefono.TabIndex = 30;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(276, 34);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(49, 13);
-            this.label6.TabIndex = 29;
-            this.label6.Text = "Telefono";
-            // 
             // Column1
             // 
             this.Column1.HeaderText = "CodigoHuesped";
@@ -319,6 +321,15 @@
             // 
             this.Column8.HeaderText = "FechaSistema";
             this.Column8.Name = "Column8";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(301, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(128, 13);
+            this.label7.TabIndex = 31;
+            this.label7.Text = "TABLA DE HUESPEDES";
             // 
             // Form_tlb_Huespedes
             // 
@@ -364,5 +375,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.Label label7;
     }
 }
