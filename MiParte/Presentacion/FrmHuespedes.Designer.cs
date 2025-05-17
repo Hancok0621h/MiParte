@@ -38,7 +38,7 @@
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvHuespedes = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.txtCodigoHuesped = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -56,7 +56,7 @@
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHuespedes)).BeginInit();
             this.SuspendLayout();
             // 
             // cboxTipo
@@ -120,7 +120,7 @@
             this.groupBox1.Controls.Add(this.iconButton3);
             this.groupBox1.Controls.Add(this.iconButton2);
             this.groupBox1.Controls.Add(this.iconButton1);
-            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Controls.Add(this.dgvHuespedes);
             this.groupBox1.Controls.Add(this.cboxEstado);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label1);
@@ -143,6 +143,7 @@
             this.iconButton5.TabIndex = 22;
             this.iconButton5.Text = "SALIR";
             this.iconButton5.UseVisualStyleBackColor = true;
+            this.iconButton5.Click += new System.EventHandler(this.iconButton5_Click);
             // 
             // iconButton4
             // 
@@ -155,6 +156,7 @@
             this.iconButton4.TabIndex = 21;
             this.iconButton4.Text = "ELIMINAR";
             this.iconButton4.UseVisualStyleBackColor = true;
+            this.iconButton4.Click += new System.EventHandler(this.iconButton4_Click);
             // 
             // iconButton3
             // 
@@ -167,6 +169,7 @@
             this.iconButton3.TabIndex = 20;
             this.iconButton3.Text = "CANCELAR";
             this.iconButton3.UseVisualStyleBackColor = true;
+            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
             // 
             // iconButton2
             // 
@@ -179,6 +182,7 @@
             this.iconButton2.TabIndex = 19;
             this.iconButton2.Text = "EDITAR";
             this.iconButton2.UseVisualStyleBackColor = true;
+            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
             // 
             // iconButton1
             // 
@@ -191,12 +195,13 @@
             this.iconButton1.TabIndex = 18;
             this.iconButton1.Text = "AGREGAR";
             this.iconButton1.UseVisualStyleBackColor = true;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
-            // dataGridView1
+            // dgvHuespedes
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvHuespedes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvHuespedes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHuespedes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
@@ -205,10 +210,11 @@
             this.Column6,
             this.Column7,
             this.Column8});
-            this.dataGridView1.Location = new System.Drawing.Point(27, 141);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(676, 150);
-            this.dataGridView1.TabIndex = 17;
+            this.dgvHuespedes.Location = new System.Drawing.Point(27, 141);
+            this.dgvHuespedes.Name = "dgvHuespedes";
+            this.dgvHuespedes.Size = new System.Drawing.Size(676, 150);
+            this.dgvHuespedes.TabIndex = 17;
+            this.dgvHuespedes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHuespedes_CellClick);
             // 
             // label2
             // 
@@ -324,7 +330,7 @@
             this.Text = "Form_tlb_Huespedes";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHuespedes)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -341,7 +347,7 @@
         private FontAwesome.Sharp.IconButton iconButton3;
         private FontAwesome.Sharp.IconButton iconButton2;
         private FontAwesome.Sharp.IconButton iconButton1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvHuespedes;
         private System.Windows.Forms.TextBox txtCodigoHuesped;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtNombre;

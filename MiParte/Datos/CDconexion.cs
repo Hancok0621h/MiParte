@@ -10,7 +10,7 @@ namespace MiParte
 {
     internal class CDconexion
     {
-        private SqlConnection db_conexion = new SqlConnection("Data Source=PC-KHRIZ\\SQLEXPRESS;Initial Catalog=DB_HoTel;Integrated Security=True;Encrypt=False");
+        public SqlConnection db_conexion = new SqlConnection("Data Source=DESKTOP-ITBVOOJ\\SQLEXPRESS;Initial Catalog=DB_HoTel;Integrated Security=True;Encrypt=False");
 
         public SqlConnection MtdAbrirConexion()
         {
