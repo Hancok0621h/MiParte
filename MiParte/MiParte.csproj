@@ -56,6 +56,11 @@
     <Compile Include="Datos\CDhuespedes.cs" />
     <Compile Include="Datos\CDasignaciones.cs" />
     <Compile Include="Datos\CDconexion.cs" />
+    <Compile Include="DB_HoTelDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_HoTelDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\FrmMenuNavegacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +99,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="DB_HoTelDataSet.xsc">
+      <DependentUpon>DB_HoTelDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DB_HoTelDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DB_HoTelDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DB_HoTelDataSet.xss">
+      <DependentUpon>DB_HoTelDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
