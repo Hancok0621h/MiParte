@@ -45,6 +45,9 @@
             this.btnEditar = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.dgvAsignacion = new System.Windows.Forms.DataGridView();
+            this.cboxEstado = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.CodigoEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CodigoHabitacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TipoAsignacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,9 +56,6 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cboxEstado = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAsignacion)).BeginInit();
             this.SuspendLayout();
@@ -260,46 +260,6 @@
             this.dgvAsignacion.TabIndex = 11;
             this.dgvAsignacion.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAsignacion_CellClick);
             // 
-            // CodigoEmpleado
-            // 
-            this.CodigoEmpleado.HeaderText = "CodigoAsignacion";
-            this.CodigoEmpleado.Name = "CodigoEmpleado";
-            // 
-            // CodigoHabitacion
-            // 
-            this.CodigoHabitacion.HeaderText = "CodigoAsignacion";
-            this.CodigoHabitacion.Name = "CodigoHabitacion";
-            // 
-            // TipoAsignacion
-            // 
-            this.TipoAsignacion.HeaderText = "CodigoHabitacion";
-            this.TipoAsignacion.Name = "TipoAsignacion";
-            // 
-            // Estado_ValoresFijos
-            // 
-            this.Estado_ValoresFijos.HeaderText = "TipoAsignacion";
-            this.Estado_ValoresFijos.Name = "Estado_ValoresFijos";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "FechaAsignacion";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Estado";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "UsuarioSistema";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "FechaSistema";
-            this.Column4.Name = "Column4";
-            // 
             // cboxEstado
             // 
             this.cboxEstado.FormattingEnabled = true;
@@ -333,6 +293,46 @@
             this.label7.TabIndex = 21;
             this.label7.Text = "TABLA DE ASIGNACIONES";
             // 
+            // CodigoEmpleado
+            // 
+            this.CodigoEmpleado.HeaderText = "CodigoAsignacion";
+            this.CodigoEmpleado.Name = "CodigoEmpleado";
+            // 
+            // CodigoHabitacion
+            // 
+            this.CodigoHabitacion.HeaderText = "CodigoEmplead";
+            this.CodigoHabitacion.Name = "CodigoHabitacion";
+            // 
+            // TipoAsignacion
+            // 
+            this.TipoAsignacion.HeaderText = "CodigoHabitacion";
+            this.TipoAsignacion.Name = "TipoAsignacion";
+            // 
+            // Estado_ValoresFijos
+            // 
+            this.Estado_ValoresFijos.HeaderText = "TipoAsignacion";
+            this.Estado_ValoresFijos.Name = "Estado_ValoresFijos";
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "FechaAsignacion";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Estado";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "UsuarioSistema";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "FechaSistema";
+            this.Column4.Name = "Column4";
+            // 
             // tbl_Asignacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -342,6 +342,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "tbl_Asignacion";
             this.Text = "Form tbl_Asignacion";
+            this.Load += new System.EventHandler(this.tbl_Asignacion_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAsignacion)).EndInit();
@@ -371,6 +372,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dtpFechaAsignacion;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridViewTextBoxColumn CodigoEmpleado;
         private System.Windows.Forms.DataGridViewTextBoxColumn CodigoHabitacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn TipoAsignacion;
@@ -379,7 +381,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.Label label7;
     }
 }
 

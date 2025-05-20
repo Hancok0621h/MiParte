@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MiParte.Datos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -129,6 +130,11 @@ namespace MiParte
             int eliminarfila = dgvAsignacion.CurrentRow.Index;
 
             dgvAsignacion.Rows.RemoveAt(eliminarfila);
+        }
+
+        private void tbl_Asignacion_Load(object sender, EventArgs e)
+        {
+
         }
     }
    
