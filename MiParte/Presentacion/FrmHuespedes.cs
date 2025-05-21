@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -122,5 +123,12 @@ namespace MiParte
             //UsuarioSistema = DgvEmpleados.CurrentRow.Cells[6].Value.ToString();
             //FechaSistema = DgvEmpleados.CurrentRow.Cells[7].Value.ToString();
         }
+
+        private void Form_tlb_Huespedes_Load(object sender, EventArgs e)
+        {
+
+        }
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
     }
 }

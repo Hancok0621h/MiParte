@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.txtCodigaEmpleado = new System.Windows.Forms.TextBox();
-            this.txtCodigoHabitacion = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.cboxTipoAsignacion = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cboxHabitacion = new System.Windows.Forms.ComboBox();
+            this.cboxEmpleado = new System.Windows.Forms.ComboBox();
             this.dtpFechaAsignacion = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.txtCodigoAsignacion = new System.Windows.Forms.TextBox();
@@ -43,19 +43,11 @@
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.btnEditar = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.btnAgregar = new FontAwesome.Sharp.IconButton();
             this.dgvAsignacion = new System.Windows.Forms.DataGridView();
             this.cboxEstado = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.CodigoEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CodigoHabitacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoAsignacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado_ValoresFijos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAsignacion)).BeginInit();
             this.SuspendLayout();
@@ -68,20 +60,6 @@
             this.label1.Size = new System.Drawing.Size(90, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "CodigoEmpleado:";
-            // 
-            // txtCodigaEmpleado
-            // 
-            this.txtCodigaEmpleado.Location = new System.Drawing.Point(129, 59);
-            this.txtCodigaEmpleado.Name = "txtCodigaEmpleado";
-            this.txtCodigaEmpleado.Size = new System.Drawing.Size(100, 20);
-            this.txtCodigaEmpleado.TabIndex = 1;
-            // 
-            // txtCodigoHabitacion
-            // 
-            this.txtCodigoHabitacion.Location = new System.Drawing.Point(129, 95);
-            this.txtCodigoHabitacion.Name = "txtCodigoHabitacion";
-            this.txtCodigoHabitacion.Size = new System.Drawing.Size(100, 20);
-            this.txtCodigoHabitacion.TabIndex = 3;
             // 
             // label2
             // 
@@ -117,6 +95,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cboxHabitacion);
+            this.groupBox1.Controls.Add(this.cboxEmpleado);
             this.groupBox1.Controls.Add(this.dtpFechaAsignacion);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.txtCodigoAsignacion);
@@ -125,22 +105,36 @@
             this.groupBox1.Controls.Add(this.iconButton4);
             this.groupBox1.Controls.Add(this.iconButton3);
             this.groupBox1.Controls.Add(this.btnEditar);
-            this.groupBox1.Controls.Add(this.iconButton1);
+            this.groupBox1.Controls.Add(this.btnAgregar);
             this.groupBox1.Controls.Add(this.dgvAsignacion);
             this.groupBox1.Controls.Add(this.cboxEstado);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.cboxTipoAsignacion);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.txtCodigaEmpleado);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.txtCodigoHabitacion);
             this.groupBox1.Location = new System.Drawing.Point(12, 22);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(719, 353);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // cboxHabitacion
+            // 
+            this.cboxHabitacion.FormattingEnabled = true;
+            this.cboxHabitacion.Location = new System.Drawing.Point(115, 95);
+            this.cboxHabitacion.Name = "cboxHabitacion";
+            this.cboxHabitacion.Size = new System.Drawing.Size(121, 21);
+            this.cboxHabitacion.TabIndex = 22;
+            // 
+            // cboxEmpleado
+            // 
+            this.cboxEmpleado.FormattingEnabled = true;
+            this.cboxEmpleado.Location = new System.Drawing.Point(115, 60);
+            this.cboxEmpleado.Name = "cboxEmpleado";
+            this.cboxEmpleado.Size = new System.Drawing.Size(121, 21);
+            this.cboxEmpleado.TabIndex = 21;
             // 
             // dtpFechaAsignacion
             // 
@@ -162,7 +156,7 @@
             // 
             // txtCodigoAsignacion
             // 
-            this.txtCodigoAsignacion.Location = new System.Drawing.Point(129, 27);
+            this.txtCodigoAsignacion.Location = new System.Drawing.Point(115, 27);
             this.txtCodigoAsignacion.Name = "txtCodigoAsignacion";
             this.txtCodigoAsignacion.Size = new System.Drawing.Size(100, 20);
             this.txtCodigoAsignacion.TabIndex = 18;
@@ -228,32 +222,23 @@
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.iconButton2_Click);
             // 
-            // iconButton1
+            // btnAgregar
             // 
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.Location = new System.Drawing.Point(610, 31);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(75, 23);
-            this.iconButton1.TabIndex = 12;
-            this.iconButton1.Text = "AGREGAR";
-            this.iconButton1.UseVisualStyleBackColor = true;
-            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
+            this.btnAgregar.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnAgregar.IconColor = System.Drawing.Color.Black;
+            this.btnAgregar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAgregar.Location = new System.Drawing.Point(610, 31);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregar.TabIndex = 12;
+            this.btnAgregar.Text = "AGREGAR";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // dgvAsignacion
             // 
             this.dgvAsignacion.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvAsignacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAsignacion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.CodigoEmpleado,
-            this.CodigoHabitacion,
-            this.TipoAsignacion,
-            this.Estado_ValoresFijos,
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4});
             this.dgvAsignacion.Location = new System.Drawing.Point(17, 168);
             this.dgvAsignacion.Name = "dgvAsignacion";
             this.dgvAsignacion.Size = new System.Drawing.Size(696, 150);
@@ -293,46 +278,6 @@
             this.label7.TabIndex = 21;
             this.label7.Text = "TABLA DE ASIGNACIONES";
             // 
-            // CodigoEmpleado
-            // 
-            this.CodigoEmpleado.HeaderText = "CodigoAsignacion";
-            this.CodigoEmpleado.Name = "CodigoEmpleado";
-            // 
-            // CodigoHabitacion
-            // 
-            this.CodigoHabitacion.HeaderText = "CodigoEmplead";
-            this.CodigoHabitacion.Name = "CodigoHabitacion";
-            // 
-            // TipoAsignacion
-            // 
-            this.TipoAsignacion.HeaderText = "CodigoHabitacion";
-            this.TipoAsignacion.Name = "TipoAsignacion";
-            // 
-            // Estado_ValoresFijos
-            // 
-            this.Estado_ValoresFijos.HeaderText = "TipoAsignacion";
-            this.Estado_ValoresFijos.Name = "Estado_ValoresFijos";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "FechaAsignacion";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Estado";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "UsuarioSistema";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "FechaSistema";
-            this.Column4.Name = "Column4";
-            // 
             // tbl_Asignacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -354,8 +299,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtCodigaEmpleado;
-        private System.Windows.Forms.TextBox txtCodigoHabitacion;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cboxTipoAsignacion;
@@ -366,21 +309,15 @@
         private FontAwesome.Sharp.IconButton iconButton4;
         private FontAwesome.Sharp.IconButton iconButton3;
         private FontAwesome.Sharp.IconButton btnEditar;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton btnAgregar;
         private System.Windows.Forms.DataGridView dgvAsignacion;
         private System.Windows.Forms.TextBox txtCodigoAsignacion;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dtpFechaAsignacion;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CodigoEmpleado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CodigoHabitacion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TipoAsignacion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Estado_ValoresFijos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.ComboBox cboxHabitacion;
+        private System.Windows.Forms.ComboBox cboxEmpleado;
     }
 }
 

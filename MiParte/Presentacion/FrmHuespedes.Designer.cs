@@ -339,6 +339,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "Form_tlb_Huespedes";
             this.Text = "Form_tlb_Huespedes";
+            this.Load += new System.EventHandler(this.Form_tlb_Huespedes_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHuespedes)).EndInit();

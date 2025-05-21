@@ -16,7 +16,7 @@ namespace MiParte
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new tbl_Asignacion());
+            Application.Run(new Form_Menu_Navegacion());
         }
     }
 }

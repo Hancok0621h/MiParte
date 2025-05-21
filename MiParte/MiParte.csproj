@@ -53,6 +53,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Logica\CLasignacion.cs" />
     <Compile Include="Datos\CDhuespedes.cs" />
     <Compile Include="Datos\CDasignaciones.cs" />
     <Compile Include="Datos\CDconexion.cs" />
@@ -125,7 +126,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Logica\" />
     <Folder Include="Seguridad\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
